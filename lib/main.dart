@@ -18,6 +18,23 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
+  String textName, textBeschreibung;
+  double textPreis;
+
+  getNameData(name) {
+    textName = name;
+    print(textName);
+  }
+  getBeschreibungData(beschreibung) {
+    textBeschreibung = beschreibung;
+    print(textBeschreibung);
+  }
+  getPreisData(preis) {
+    textPreis = double.parse(preis);
+    print(textPreis);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +50,7 @@ class _MyAppState extends State<MyApp> {
                 hintText: "Name"
               ),
               onChanged: (String name) {
-
+                getNameData(name);
               },
             ),
             TextField(
@@ -41,15 +58,16 @@ class _MyAppState extends State<MyApp> {
                   hintText: "Beschreibung"
               ),
               onChanged: (String beschreibung) {
-
+                getBeschreibungData(beschreibung);
               },
             ),
             TextField(
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                   hintText: "Preis"
               ),
               onChanged: (String preis) {
-
+                getPreisData(preis);
               },
             ),
             Padding(
