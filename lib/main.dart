@@ -20,7 +20,42 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Firebase CRUD"),
+      ),
+      body: Padding(
+          padding: EdgeInsets.all(8.0),
+        child: Column(
+          children: <Widget>[
+            TextField(
+              decoration: InputDecoration(
+                hintText: "Name"
+              ),
+              onChanged: (String name) {
+
+              },
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: "Beschreibung"
+              ),
+              onChanged: (String beschreibung) {
+
+              },
+            ),
+            TextField(
+              decoration: InputDecoration(
+                  hintText: "Preis"
+              ),
+              onChanged: (String preis) {
+
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
