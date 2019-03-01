@@ -22,3 +22,8 @@ Im ersten Teil wird einfach nur die App aufgebaut.
         * Einfügen in  AndroidStudio -> Projektname -> android -> app
         * "Weiter"
         * classpath... unter AndroidStudio -> Projektname -> android an die entsprechende Stelle einfügen
+        * Rest unter AndroidStudio -> Projektname -> android -> app in build.gradle einfügen
+        * "Weiter"
+        * Wenn erfolgreich Kontak --> "Sie haben Firebase erfolgreich..."
+    2. IOS:
+        * 
