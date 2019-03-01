@@ -52,6 +52,53 @@ class _MyAppState extends State<MyApp> {
 
               },
             ),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Row(
+                textDirection: TextDirection.ltr,
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(right: 8.0),
+                    child: RaisedButton(
+                      color: Colors.green,
+                      child: Text("Create"),
+                      onPressed: (){
+
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 8.0),
+                    child: RaisedButton(
+                      color: Colors.orange,
+                      child: Text("Update"),
+                      onPressed: (){
+
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 8.0),
+                    child: RaisedButton(
+                      child: Text("Read"),
+                      onPressed: (){
+
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right: 0.0),
+                    child: RaisedButton(
+                      color: Colors.red,
+                      child: Text("Delete"),
+                      onPressed: (){
+
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
