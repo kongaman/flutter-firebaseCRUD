@@ -35,6 +35,23 @@ class _MyAppState extends State<MyApp> {
     print(textPreis);
   }
 
+  createData(){
+    print("create");
+  }
+
+  updateData(){
+    print("update");
+  }
+
+  readData(){
+    print("read");
+  }
+
+  deleteData(){
+    print("delete");
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,7 +98,7 @@ class _MyAppState extends State<MyApp> {
                       color: Colors.green,
                       child: Text("Create"),
                       onPressed: (){
-
+                        createData();
                       },
                     ),
                   ),
@@ -91,7 +108,7 @@ class _MyAppState extends State<MyApp> {
                       color: Colors.orange,
                       child: Text("Update"),
                       onPressed: (){
-
+                        updateData();
                       },
                     ),
                   ),
@@ -100,7 +117,7 @@ class _MyAppState extends State<MyApp> {
                     child: RaisedButton(
                       child: Text("Read"),
                       onPressed: (){
-
+                        readData();
                       },
                     ),
                   ),
@@ -110,7 +127,7 @@ class _MyAppState extends State<MyApp> {
                       color: Colors.red,
                       child: Text("Delete"),
                       onPressed: (){
-
+                        deleteData();
                       },
                     ),
                   ),
