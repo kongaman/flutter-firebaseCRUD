@@ -28,6 +28,7 @@
 /build/
 
 # Android related
+google-services.json
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
 **/android/captures/
