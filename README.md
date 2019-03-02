@@ -32,4 +32,5 @@ Im ersten Teil wird einfach nur die App aufgebaut.
         * cloud_firestore in pubspec.yaml unter dependecies eintragen 
         * doppelklick auf cloud_firestore zum markieren
         * dann auf die Lampe -> Flutter commands -> Packages get
+ * Methoden anpassen
         
