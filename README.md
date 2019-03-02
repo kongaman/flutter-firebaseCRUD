@@ -26,4 +26,10 @@ Im ersten Teil wird einfach nur die App aufgebaut.
         * "Weiter"
         * Wenn erfolgreich Kontak --> "Sie haben Firebase erfolgreich..."
     2. IOS:
-        * 
+        * de.ck.train.flutter_firebasecrud !!!! **Unterstrich geht nicht -> nie wieder machen**
+        * GoogleService-Infp.plist unter ios -> Runner speichern
+        * alle andere Sachen können übersprungen werden
+        * cloud_firestore in pubspec.yaml unter dependecies eintragen 
+        * doppelklick auf cloud_firestore zum markieren
+        * dann auf die Lampe -> Flutter commands -> Packages get
+        
