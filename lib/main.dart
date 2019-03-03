@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() => runApp(
   MaterialApp(
@@ -44,7 +45,15 @@ class _MyAppState extends State<MyApp> {
   }
 
   readData(){
-    print("read");
+
+    DocumentReference dRef = Firestore.instance.collection("Gerichte").document(textName);
+    dRef.get().then((datasnapshot) {
+      print(datasnapshot.data["Name"]);
+      print(datasnapshot.data["Beschreibung"]);
+      print(datasnapshot.data["Preis"]);
+    });
+
+
   }
 
   deleteData(){

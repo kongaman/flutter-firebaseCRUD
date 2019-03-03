@@ -33,4 +33,6 @@ Im ersten Teil wird einfach nur die App aufgebaut.
         * doppelklick auf cloud_firestore zum markieren
         * dann auf die Lampe -> Flutter commands -> Packages get
  * Methoden anpassen
+        * readData()
+        
         
