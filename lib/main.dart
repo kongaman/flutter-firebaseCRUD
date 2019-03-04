@@ -57,7 +57,10 @@ class _MyAppState extends State<MyApp> {
   }
 
   deleteData(){
-    print("delete");
+    DocumentReference dRef = Firestore.instance.collection("Gerichte").document(textName);
+    dRef.delete().whenComplete(() {
+      print("$textName gelöscht");
+    });
   }
 
 

@@ -34,5 +34,6 @@ Im ersten Teil wird einfach nur die App aufgebaut.
         * dann auf die Lampe -> Flutter commands -> Packages get
  * Methoden anpassen
         * readData()
-        
+        * deleteData()
+        * createData()
         
