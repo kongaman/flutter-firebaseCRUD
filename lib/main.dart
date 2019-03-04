@@ -37,7 +37,15 @@ class _MyAppState extends State<MyApp> {
   }
 
   createData(){
-    print("create");
+    DocumentReference dRef = Firestore.instance.collection("Gerichte").document(textName);
+    Map<String, dynamic> gericht = {
+      "Name": textName,
+      "Beschreibung": textBeschreibung,
+      "Preis": textPreis
+    };
+    dRef.setData(gericht).whenComplete(() {
+      print("$textName gespeichert");
+    });
   }
 
   updateData(){
