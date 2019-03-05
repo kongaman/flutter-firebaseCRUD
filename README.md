@@ -36,4 +36,9 @@ Im ersten Teil wird einfach nur die App aufgebaut.
         * readData()
         * deleteData()
         * createData()
+        * updateData()
+ * Streamreader zum Einlesen der Einträge<br>
+    ![Image Phone]( ./doku/app.png)
+ 
+ 
         

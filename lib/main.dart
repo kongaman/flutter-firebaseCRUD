@@ -200,7 +200,31 @@ class _MyAppState extends State<MyApp> {
                 ),
               ],
             ),
-
+          StreamBuilder(
+            stream: Firestore.instance.collection("Gerichte").snapshots(),
+            builder: (context, snapshot){
+              return ListView.builder(
+                shrinkWrap: true,
+                itemCount: snapshot.data.documents.length,
+                padding: EdgeInsets.only(top: 10.0),
+                itemBuilder: (context, index){
+                  DocumentSnapshot ds = snapshot.data.documents[index];
+                  return Column(
+                    children: <Widget>[
+                      Row(
+                        textDirection: TextDirection.ltr,
+                        children: <Widget>[
+                          Expanded(child: Text(ds["Name"])),
+                          Expanded(child: Text(ds["Beschreibung"])),
+                          Expanded(child: Text(ds["Preis"].toString())),
+                        ],
+                      )
+                    ],
+                  );
+                },
+              );
+            },
+          )
           ],
         ),
       ),
