@@ -186,7 +186,21 @@ class _MyAppState extends State<MyApp> {
                   ),
                 ],
               ),
-            )
+            ),Row(
+              textDirection: TextDirection.ltr,
+              children: <Widget>[
+                Expanded(
+                  child: Text("Name"),
+                ),
+                Expanded(
+                  child: Text("Beschreibung"),
+                ),
+                Expanded(
+                  child: Text("Preis"),
+                ),
+              ],
+            ),
+
           ],
         ),
       ),
