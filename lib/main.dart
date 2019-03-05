@@ -49,7 +49,15 @@ class _MyAppState extends State<MyApp> {
   }
 
   updateData(){
-    print("update");
+    DocumentReference dRef = Firestore.instance.collection("Gerichte").document(textName);
+    Map<String, dynamic> gericht = {
+      "Name": textName,
+      "Beschreibung": textBeschreibung,
+      "Preis": textPreis
+    };
+    dRef.setData(gericht).whenComplete(() {
+      print("$textName gespeichert");
+    });
   }
 
   readData(){
@@ -59,6 +67,8 @@ class _MyAppState extends State<MyApp> {
       print(datasnapshot.data["Name"]);
       print(datasnapshot.data["Beschreibung"]);
       print(datasnapshot.data["Preis"]);
+
+      readGericht(datasnapshot.data["Name"], datasnapshot.data["Beschreibung"], datasnapshot.data["Preis"]);
     });
 
 
@@ -69,6 +79,29 @@ class _MyAppState extends State<MyApp> {
     dRef.delete().whenComplete(() {
       print("$textName gelöscht");
     });
+  }
+  
+  void readGericht(name, beschreibung, preis) {
+    showDialog(context: context,
+    child: AlertDialog(
+      title: Text("$name: $preis"),
+      content: SingleChildScrollView(
+       child: ListBody(
+         children: <Widget>[
+           Divider(),
+           Text(beschreibung),
+         ],
+       ),
+      ),
+      actions: <Widget>[
+        FlatButton(
+          child: Text("Ok"),
+          onPressed: (){
+            Navigator.of(context).pop();
+          },
+        )
+      ],
+    ));
   }
 
 
