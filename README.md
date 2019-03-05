@@ -38,7 +38,9 @@ Im ersten Teil wird einfach nur die App aufgebaut.
         * createData()
         * updateData()
  * Streamreader zum Einlesen der Einträge<br>
-    ![Image Phone]( ./doku/app.png)
+    ![Image Phone]( ./doku/app.png)<br><br>
+    Durch die zusätzliche If-Abfrage wird überprüft ob bereits Daten geladen wurden.<br>
+    Falls nicht wird ein kreisendes Ldaesymbol angezeigt.
  
  
         
